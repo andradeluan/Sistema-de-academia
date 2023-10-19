@@ -4,7 +4,7 @@ nome_nutricionistas = ['Nutri1','Nutri2','Nutri3','Nutri4','Nutri5'] #nomes dos 
 
 opcao = 0 #variável que recebe a direção do aluno
 while True: #laço de repetição menu nutrição
-  opcao = int(input('Selecione a opção que você deseja: \n1. Avaliação Física.\n2. Plano Alimentar.\n3. Avaliação física e Plano Alimentar.\n4. Sair\n'))
+  opcao = int(input('1. Avaliação Física.\n2. Plano Alimentar.\n3. Avaliação física e Plano Alimentar.\n4. Sair\nSelecione a opção que você deseja: '))
   if opcao > 0 and opcao < 5:
     break
   else:
