@@ -1,4 +1,4 @@
-from datetime import datetime, timedelta
+# from datetime import datetime, timedelta
 
 
 def escolher_plano():
@@ -56,24 +56,24 @@ def escolher_forma_de_pagamento(plano):
     return False
 
 
-def adicionar_status_do_plano(plano, parcelas):
-    hoje = datetime.now()
-    data_do_pagamento = hoje.strftime("%d/%m/%Y")
-    data_do_plano = hoje + timedelta(days=30 * parcelas)
-    data_do_plano = data_do_plano.strftime("%d/%m/%Y")
+#def adicionar_status_do_plano(plano, parcelas):
+#    hoje = datetime.now()
+#   data_do_pagamento = hoje.strftime("%d/%m/%Y")
+#   data_do_plano = hoje + timedelta(days=30 * parcelas)
+#   data_do_plano = data_do_plano.strftime("%d/%m/%Y")
 
-    print("Status do plano do aluno:")
-    print(f"Plano: {plano[0]}")
-    print("Situação: Ativo")
-    print(f"Início: {data_do_pagamento}")
-    print(f"Validade: {data_do_plano}")
+#   print("Status do plano do aluno:")
+#   print(f"Plano: {plano[0]}")
+#   print("Situação: Ativo")
+#   print(f"Início: {data_do_pagamento}")
+#   print(f"Validade: {data_do_plano}")
 
 
-plano = escolher_plano()
-if plano:
-    sucesso_pagamento = escolher_forma_de_pagamento(plano)
-    if sucesso_pagamento:
-        adicionar_status_do_plano(plano, plano[2])
-else:
-    print("Opção de plano inválida.")
+#plano = escolher_plano()
+#if plano:
+#    sucesso_pagamento = escolher_forma_de_pagamento(plano)
+#    if sucesso_pagamento:
+#        adicionar_status_do_plano(plano, plano[2])
+#else:
+#    print("Opção de plano inválida.")
 
