@@ -1,8 +1,10 @@
 import cadastro
+
 opcao = 0
 user = any
 senha = any
 while opcao != 3:
+    
     #Menu Principal:
     print('=-='*10)
     print("\nACADEMIA FIT GYM\nPara você deixar sua saúde em dia!\n")
@@ -13,21 +15,24 @@ while opcao != 3:
 
     #Opção ENTRAR
     if opcao == 1:
-        while True:
-            verificador_user = input('Digite seu Login: ')
-            verificador_senha = input('Digite sua Senha: ')
+        verificador_user = input('Digite seu Login: ')
+        verificador_senha = input('Digite sua Senha: ')
+        ent=0
+        while ent != 1:
             for dicionario in cadastro.funcionario_cadastrado:
+                #Menu do funcionário logado
                 if verificador_user == dicionario["user"] and verificador_senha == dicionario["senha"]:
                     print('=-='*10)
-                    print("\n[ 1 ] Cadastros\n[ 2 ] Nutricionista\n[ 3 ] Personal\n[ 4 ] Sair\n")
+                    print("\n[ 1 ] Cadastros\n[ 2 ] Nutricionista\n[ 3 ] Personal\n[ 4 ] Voltar\n")
                     print('=-='*10)
                     opcao = int(input('\nEscolha uma opção: '))
                     if opcao == 1:
                         print("\nCADASTRAR COMO\n")
-                        print("\n [ 1 ] Cliente\n [ 2 ] Nutricionista\n [ 3 ] Personal\n [ 4 ] Menu Principal\n")
+                        print("\n [ 1 ] Cliente\n [ 2 ] Nutricionista\n [ 3 ] Personal\n [ 4 ] Voltar\n")
                         cad = int(input("\nEscolha uma opção: "))
                         print('=-='*10)
                         while cad != 4:
+                            
                             #chama a função de cadastro de clientes
                             if cad == 1:
                                 #import cadastro
@@ -49,7 +54,7 @@ while opcao != 3:
                             #Volta pro Menu Principal
                             elif cad == 4:
                                 print('=-='*10)
-                                print("Voltando ao Menu Principal...")
+                                print("Carregando...")
                                 print('=-='*10)
 
                             #nem um nem outro
@@ -63,18 +68,19 @@ while opcao != 3:
                         pass
                     #elif opcao == 3:
                     elif opcao == 4:
-                        break
+                        ent = 1
                     else:
                                 print('=-='*10)
                                 print("\nOpção inválida\n")
                                 print('=-='*10)
                 else:
+                    print('=-='*10)
                     print('Login ou Senha estão incorretos.\nTente novamente')
+                    print('=-='*10)
+                    ent = 1
 
-
-    #Opção CADASTRO
+    #Opção CADASTRO (de funcionário)
     elif opcao == 2:
-    
         cadastro.cad_funcionario()
 
     #Opção SAIR

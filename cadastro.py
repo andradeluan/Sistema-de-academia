@@ -1,7 +1,6 @@
-#LISTAS DOS CADASTRADOS
-
 from pagamento import escolher_plano, escolher_forma_de_pagamento
 
+#LISTAS DOS CADASTRADOS
 cliente_cadastrado = []
 nutri_cadastrado = []
 personal_cadastrado = []
@@ -20,7 +19,7 @@ def cad_cliente():
     matricula = tel[-4] + dt_nasc[-4]
     cliente = {"nome": nome, "CPF": cpf, "Dt_Nasc": dt_nasc, "Endereço": end, "Telefone": tel, "E-mail": email, "Matrícula":matricula}
     cliente_cadastrado.append(cliente)
-   
+
     plano = escolher_plano()
     if plano:
         sucesso_pagamento = escolher_forma_de_pagamento(plano)
@@ -46,8 +45,6 @@ def cad_nutri():
     print("\nParabéns!\nCadastrado com sucesso.\n")
     print('=-='*10)
     
-
-
 #função - cadastro de personal
 def cad_personal():
     print('=-='*10)
