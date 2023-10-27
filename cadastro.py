@@ -1,10 +1,13 @@
 from pagamento import escolher_plano, escolher_forma_de_pagamento
 
 #LISTAS DOS CADASTRADOS
+funcionario_cadastrado = []
 cliente_cadastrado = []
 nutri_cadastrado = []
 personal_cadastrado = []
-funcionario_cadastrado = []
+
+funcionario_master = {"Nome": "Cuka Tenilson", "CPF": "123.321.123-32", "E-mail": "cuka@email.com","user": "Cuka", "senha": "@CukaAcademia01"}
+funcionario_cadastrado.append(funcionario_master)
 
 #função - cadastro de clientes
 def cad_cliente():
