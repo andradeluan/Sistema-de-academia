@@ -15,10 +15,10 @@ while opcao != 3:
 
     #Opção ENTRAR
     if opcao == 1:
-        verificador_user = input('Digite seu Login: ')
-        verificador_senha = input('Digite sua Senha: ')
         ent=0
         while ent != 1:
+            verificador_user = input('Digite seu Login: ')
+            verificador_senha = input('Digite sua Senha: ')
             for dicionario in cadastro.funcionario_cadastrado:
                 #Menu do funcionário logado
                 if verificador_user == dicionario["user"] and verificador_senha == dicionario["senha"]:
