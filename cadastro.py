@@ -6,7 +6,7 @@ cliente_cadastrado = []
 nutri_cadastrado = []
 personal_cadastrado = []
 
-funcionario_master = {"Nome": "Cuka Tenilson", "CPF": "123.321.123-32", "E-mail": "cuka@email.com","user": "Cuka", "senha": "@CukaAcademia01"}
+funcionario_master = {"Nome": "admin", "CPF": "123.321.123-32", "E-mail": "admin@email.com","user": "admin", "senha": "admin"}
 funcionario_cadastrado.append(funcionario_master)
 
 #função - cadastro de clientes
