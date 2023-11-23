@@ -58,6 +58,8 @@ def nutri():
         break
       else:
         print('Opção invalida!\nTente outra vez.\n')
+    elif op == 4:
+      break
     else:
       print('Opção invalida!\nTente outra vez.\n')
     print('=-='*10)
