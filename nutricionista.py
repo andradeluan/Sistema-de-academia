@@ -67,4 +67,7 @@ def nutri():
       print('Opção invalida!\nTente outra vez.\n')
     print('=-='*10)
 
-  
+'''
+Quando dá opção inválida e pede pra tentar outra vez volta pra o menu das opções
+ao invés de mostrar a lista novamente
+'''
