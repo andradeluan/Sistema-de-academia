@@ -21,14 +21,18 @@ def cad_cliente():
     email = input("E-mail: ")
     matricula = tel[-4] + dt_nasc[-4]
     cliente = {"nome": nome, "CPF": cpf, "Dt_Nasc": dt_nasc, "Endereço": end, "Telefone": tel, "E-mail": email, "Matrícula":matricula}
-    cliente_cadastrado.append(cliente)
-
-    plano = escolher_plano()
-    if plano:
-        sucesso_pagamento = escolher_forma_de_pagamento(plano)
-    else:
-        print("Opção de plano inválida.")
-
+    while True:
+        plano = escolher_plano()
+        if plano:
+            sucesso_pagamento = escolher_forma_de_pagamento(plano)
+            if sucesso_pagamento == True:
+                cliente_cadastrado.append(cliente)
+                print('=-='*10)
+                print('\nMatrícula realizado com sucesso.\n')
+                print('=-='*10)
+                break
+            elif sucesso_pagamento == False:
+                continue
 
 #função - cadastro de nutricionista
 def cad_nutri():
@@ -41,31 +45,12 @@ def cad_nutri():
     tel = input("Telefone: ")
     email = input("E-mail: ")
     crn = input("CRN: ")
-    matricula = tel[-4] + dt_nasc[-4]
-    nutri = {"nome": nome, "CPF": cpf, "Dt_Nasc": dt_nasc, "Endereço": end, "Telefone": tel, "E-mail": email, "CRN": crn, "Matrícula":matricula}
+    nutri = {"nome": nome, "CPF": cpf, "Dt_Nasc": dt_nasc, "Endereço": end, "Telefone": tel, "E-mail": email, "CRN": crn}
     nutri_cadastrado.append(nutri)
     print('=-='*10)
     print("\nParabéns!\nCadastrado com sucesso.\n")
     print('=-='*10)
     
-#função - cadastro de personal
-def cad_personal():
-    print('=-='*10)
-    print("\nPREENCHA SEUS DADOS A SEGUIR\n")
-    nome = input("Nome: ")
-    cpf = input("CPF: ")
-    dt_nasc = input("Data de Nascimento: ")
-    end = input("Endereço: ")
-    tel = input("Telefone: ")
-    email = input("E-mail: ")
-    cref = input("CREF: ")
-    matricula = tel[-4] + dt_nasc[-4]
-    personal = {"nome": nome, "CPF": cpf, "Dt_Nasc": dt_nasc, "Endereço": end, "Telefone": tel, "E-mail": email, "CREF": cref, "Matrícula":matricula}
-    personal_cadastrado.append(personal)
-    print('=-='*10)
-    print("\nParabéns!\nCadastrado com sucesso.\n")
-    print('=-='*10)
-
 #função - cadastro de funcionario
 def cad_funcionario():
     print('=-='*10)
@@ -73,7 +58,14 @@ def cad_funcionario():
     nome = input("Nome: ")
     cpf = input("CPF: ")
     email = input("E-mail: ")
-    user = input('Crie um Login: ')
+    cont = 0
+    while cont == 0:
+        user = input('Crie um Login: ')
+        for  dicionario in funcionario_cadastrado:
+            if user == dicionario["user"]:
+                print("Este nome ja esta sendo utilizado")
+            else:
+                cont = 1
     senha = input('Crie uma Senha: ')
     funcionario = {"nome": nome, "CPF": cpf, "E-mail": email,"user": user, "senha":senha}
     funcionario_cadastrado.append(funcionario)

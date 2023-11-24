@@ -18,8 +18,9 @@ def nutri():
       select_nutri = int(input('Escolha uma opção (0 para Sair): '))
       if select_nutri > 0 and select_nutri<= len(cadastro.nutri_cadastrado):
         plano = "Avaliação Física", 50.00, 1
-        pagamento.escolher_forma_de_pagamento(plano)
-        print('Consulta marcada com sucesso')
+        sucesso_pagamento = pagamento.escolher_forma_de_pagamento(plano)
+        if sucesso_pagamento == True:
+          print('Consulta marcada com sucesso')
       elif select_nutri == 0:
         break
       else:
@@ -35,8 +36,9 @@ def nutri():
       select_nutri = int(input('Escolha uma opção (0 para Sair): '))
       if select_nutri > 0 and select_nutri<= len(cadastro.nutri_cadastrado):
         plano = "Plano Alimentar", 150.00, 3
-        pagamento.escolher_forma_de_pagamento(plano)
-        print('Consulta marcada com sucesso')
+        sucesso_pagamento = pagamento.escolher_forma_de_pagamento(plano)
+        if sucesso_pagamento == True:
+          print('Consulta marcada com sucesso')
       elif select_nutri == 0:
         break
       else:
@@ -52,8 +54,9 @@ def nutri():
       select_nutri = int(input('Escolha uma opção (0 para Sair): '))
       if select_nutri > 0 and select_nutri<= len(cadastro.nutri_cadastrado):
         plano = "Avaliação física + Plano Alimentar", 150.00, 3
-        pagamento.escolher_forma_de_pagamento(plano)
-        print('Consulta marcada com sucesso' )
+        sucesso_pagamento = pagamento.escolher_forma_de_pagamento(plano)
+        if sucesso_pagamento == True:
+          print('Consulta marcada com sucesso')
       elif select_nutri == 0:
         break
       else:

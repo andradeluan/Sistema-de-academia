@@ -19,13 +19,12 @@ while opcao != 3:
             #Menu do funcionário logado
             if verificador_user == dicionario["user"]:
                 if verificador_senha == dicionario["senha"]:
-                    ent=0
-                    while ent != 1:        
+                    while True:
                         print('=-='*10)
                         print("\n[ 1 ] Cadastros\n[ 2 ] Nutricionista\n[ 3 ] Voltar\n")
                         print('=-='*10)
-                        opcao = int(input('\nEscolha uma opção: '))
-                        if opcao == 1:
+                        op = int(input('\nEscolha uma opção: '))
+                        if op == 1:
                             while True:
                                 print("\nCADASTRAR COMO\n")
                                 print("\n [ 1 ] Cliente\n [ 2 ] Nutricionista\n [ 3 ] Voltar\n")
@@ -52,10 +51,10 @@ while opcao != 3:
                                         print('=-='*10)
                                         print("\nOpção inválida\n")
                                         print('=-='*10)
-                        elif opcao == 2:
+                        elif op == 2:
                             nutricionista.nutri()
-                        elif opcao == 3:
-                            ent = 1
+                        elif op == 3:
+                            break
                         else:
                             print('=-='*10)
                             print("\nOpção inválida\n")
