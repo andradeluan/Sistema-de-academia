@@ -1,4 +1,4 @@
-def nutri(): # funçao para contratar serviço de nutricionista
+def nutri(): # função para contratar serviço de nutricionista
   import cadastro
   import pagamento
   print('=-='*10)
@@ -44,11 +44,13 @@ def nutri(): # funçao para contratar serviço de nutricionista
         elif select_nutri == 0:
           break
         else:
-          print('Opção invalida!\nTente outra vez.\n')
+           print('=-='*10)
+           print('Opção invalida!\nTente outra vez.\n')
+           print('=-='*10)
     elif op == 3:
       print('=-='*10)
-      print('Avaliação física + Plano Alimentar custa R$150,00')
-      print('Lista de nutricionistas disponíveis')
+      print('\nAvaliação física + Plano Alimentar custa R$150,00\n')
+      print('\nLista de nutricionistas disponíveis:\n')
       quant = 0
       for i in cadastro.nutri_cadastrado:
         quant += 1
@@ -59,14 +61,19 @@ def nutri(): # funçao para contratar serviço de nutricionista
           plano = "Avaliação física + Plano Alimentar", 150.00, 3
           sucesso_pagamento = pagamento.escolher_forma_de_pagamento(plano)
           if sucesso_pagamento == True:
-            print('Consulta marcada com sucesso')
+            print('=-='*10)
+            print('\nConsulta marcada com sucesso\n')
+            print('=-='*10)
         elif select_nutri == 0:
           break
         else:
+          print('=-='*10)
           print('Opção invalida!\nTente outra vez.\n')
+          print('=-='*10)
     elif op == 4:
       break
     else:
+      print('=-='*10)
       print('Opção invalida!\nTente outra vez.\n')
-    print('=-='*10)
+      print('=-='*10)
 

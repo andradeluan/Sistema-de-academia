@@ -1,8 +1,8 @@
+#Conectando com outros documentos.py
 import cadastro
 import nutricionista
 
 opcao = 0
-
 while opcao != 3:
     # Menu Principal:
     print('=-='*10)
@@ -16,8 +16,8 @@ while opcao != 3:
         verificador_user = input('Digite seu Login: ')
         verificador_senha = input('Digite sua Senha: ')
         for  dicionario in cadastro.funcionario_cadastrado:
-            if verificador_user == dicionario["user"]: # verifica se o usuario existe
-                if verificador_senha == dicionario["senha"]: # verifica se a senha do usuario estar correta
+            if verificador_user == dicionario["user"]: # verifica se o usuário existe
+                if verificador_senha == dicionario["senha"]: # verifica se a senha do usuario está correta
                     # Menu do funcionário logado
                     while True: 
                         print('=-='*10)
@@ -36,16 +36,16 @@ while opcao != 3:
                                 elif cad == 2: # chama função de cadastro de nutricionista
                                     cadastro.cad_nutri()
                                     break
-                                elif cad == 3: # Volta pro Menu Principal
+                                elif cad == 3: # Volta para o 'Menu Principal'
                                     print('=-='*10)
                                     print("Carregando...")
                                     print('=-='*10)
                                     break
-                                else: # mensagem quando é selecionado uma Opção Inválida
+                                else: # Mensagem quando é selecionado uma Opção Inválida
                                     print('=-='*10)
                                     print("\nOpção inválida\n")
                                     print('=-='*10)
-                        elif op == 2:# chama a funçao com serviços de nutricionistas 
+                        elif op == 2:# chama a função com serviços de nutricionistas 
                             nutricionista.nutri()
                         elif op == 3: # volta para o menu principal
                             break
@@ -67,6 +67,6 @@ while opcao != 3:
         print('=-='*10)
         break
     # mensagem quando é selecionado uma Opção Inválida
-    else:
+    else: 
         print("Opção Inválida!\n Tente novamente.\n")
-print("\nVOLTE SEMPRE!\n")
+print("\nVOLTE SEMPRE!\n") #Fim do programa
