@@ -6,7 +6,7 @@ cliente_cadastrado = []
 nutri_cadastrado = []
 personal_cadastrado = []
 
-funcionario_master = {"nome": "admin", "CPF": "123.321.123-32", "E-mail": "admin@email.com","user": "admin", "senha": "admin"}
+funcionario_master = {"nome": "admin", "CPF": "123.321.123-32", "E-mail": "admin@email.com","user": "admin", "senha": "admin"} # usuario admin 
 funcionario_cadastrado.append(funcionario_master)
 
 #função - cadastro de clientes
@@ -21,7 +21,7 @@ def cad_cliente():
     email = input("E-mail: ")
     matricula = tel[-4] + dt_nasc[-4]
     cliente = {"nome": nome, "CPF": cpf, "Dt_Nasc": dt_nasc, "Endereço": end, "Telefone": tel, "E-mail": email, "Matrícula":matricula}
-    while True:
+    while True: # antes de finalizar a matricula o cliente escolhe um plano e faz o pagamento 
         plano = escolher_plano()
         if plano:
             sucesso_pagamento = escolher_forma_de_pagamento(plano)
@@ -62,7 +62,7 @@ def cad_funcionario():
     while cont == 0:
         user = input('Crie um Login: ')
         for  dicionario in funcionario_cadastrado:
-            if user == dicionario["user"]:
+            if user == dicionario["user"]: # verifica se o nome de usuario ja esta sendo utilizado
                 print("Este nome ja esta sendo utilizado")
             else:
                 cont = 1

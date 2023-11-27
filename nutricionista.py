@@ -1,9 +1,9 @@
-def nutri():
+def nutri(): # funçao para contratar serviço de nutricionista
   import cadastro
   import pagamento
   print('=-='*10)
   op = 0 
-  while True:
+  while True: # menu para contratar serviço de nutricionista
     op = int(input('1. Avaliação Física.\n2. Plano Alimentar.\n3. Avaliação física + Plano Alimentar.\n4. Sair\nEscolha uma opção: '))
     if op == 1:
       print('=-='*10)

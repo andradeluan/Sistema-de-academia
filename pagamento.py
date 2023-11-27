@@ -1,5 +1,4 @@
-# from datetime import datetime, timedelta
-def escolher_plano():
+def escolher_plano(): # menu para escolher plano
     print('=-='*10)
     print("\nEscolha um plano:\n")
     print("[ 1 ] Mensal - Valor: R$100,00 (até 1x)")
@@ -7,7 +6,6 @@ def escolher_plano():
     print("[ 3 ] Semestral - Valor: R$420,00 (até 6x de R$70,00)")
     print("[ 4 ] Anual - Valor: R$600,00 (até 12x de R$50,00)")
     print("[ 5 ] Sair\n")
-
     print('=-='*10)
     escolha = 0
     while True:
@@ -26,7 +24,7 @@ def escolher_plano():
             print("Opção inválida. Por favor, tente novamente.")
 
 
-def escolher_forma_de_pagamento(plano):
+def escolher_forma_de_pagamento(plano): # menu para escolher a forma de pagamento
     print('=-='*10)
     print("\nEscolha a forma de pagamento:\n")
     print("[ 1 ] Pix")
@@ -35,23 +33,21 @@ def escolher_forma_de_pagamento(plano):
     print("[ 4 ] Cartão de Débito")
     print("[ 5 ] Voltar\n")
     print('=-='*10)
-    
     while True:
         escolha = int(input("\nEscolha o número da forma de pagamento desejada: "))
-        if escolha == 1: #pix
+        if escolha == 1: # pagamento via pix
             print('=-='*10)
             print("\nAguarde enquanto geramos o QR code para pagamento\n")
             print('=-='*10)
-            # Simular pagamento bem-sucedido
-            print("\nPagamento realizado com sucesso\n")
+            print("\nPagamento realizado com sucesso\n") # Simular pagamento bem-sucedido
             print('=-='*10)
             return True
-        elif escolha == 2: #dindin money
+        elif escolha == 2: # pagamento via  dinhero
             print('=-='*10)
-            print("\nTransação autorizada\n")
+            print("\nTransação autorizada\n") # Simular pagamento bem-sucedido
             print('=-='*10)
             return True
-        elif escolha == 3: #credito
+        elif escolha == 3: # pagamento via cartao de credito
             while True:
                 max_parcelas = plano[2]
                 print('=-='*10)
@@ -59,46 +55,22 @@ def escolher_forma_de_pagamento(plano):
                 print('=-='*10)
                 if 1 <= parcelas <= max_parcelas:
                     print('=-='*10)
-                    print(f"\nTransação autorizada para {parcelas} parcelas\n")
+                    print(f"\nTransação autorizada para {parcelas} parcelas\n") # Simular pagamento bem-sucedido
                     print('=-='*10)
-                    
                     break
-                else:
+                else: # mensagem de quando selecionam o Número de parcelas inválido para o plano escolhido
                     print('=-='*10)
                     print("\nNúmero de parcelas inválido para o plano escolhido\n")
                     print('=-='*10)
             return True
-        elif escolha == 4: # debito 
+        elif escolha == 4: # pagamento via cartao de debito 
             print('=-='*10)
-            print("\nTransação autorizada\n")
+            print("\nTransação autorizada\n") # Simular pagamento bem-sucedido
             print('=-='*10)
             return True
-        elif escolha == 5:
+        elif escolha == 5: # voltar para o menu de escolha de plano 
             return False
-        else:
+        else: # mensagem quando é selecionado uma Opção de pagamento inválida
             print('=-='*10)
             print("\nOpção de pagamento inválida\n")
             print('=-='*10)
-
-
-#def adicionar_status_do_plano(plano, parcelas):
-#    hoje = datetime.now()
-#   data_do_pagamento = hoje.strftime("%d/%m/%Y")
-#   data_do_plano = hoje + timedelta(days=30 * parcelas)
-#   data_do_plano = data_do_plano.strftime("%d/%m/%Y")
-
-#   print("Status do plano do aluno:")
-#   print(f"Plano: {plano[0]}")
-#   print("Situação: Ativo")
-#   print(f"Início: {data_do_pagamento}")
-#   print(f"Validade: {data_do_plano}")
-
-
-#plano = escolher_plano()
-#if plano:
-#    sucesso_pagamento = escolher_forma_de_pagamento(plano)
-#    if sucesso_pagamento:
-#        adicionar_status_do_plano(plano, plano[2])
-#else:
-#    print("Opção de plano inválida.")
-
