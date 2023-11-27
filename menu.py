@@ -48,9 +48,9 @@ while opcao != 3:
                                     break
                                 #nem um nem outro
                                 else:
-                                        print('=-='*10)
-                                        print("\nOpção inválida\n")
-                                        print('=-='*10)
+                                    print('=-='*10)
+                                    print("\nOpção inválida\n")
+                                    print('=-='*10)
                         elif op == 2:
                             nutricionista.nutri()
                         elif op == 3:
