@@ -4,7 +4,6 @@ from pagamento import escolher_plano, escolher_forma_de_pagamento
 funcionario_cadastrado = []
 cliente_cadastrado = []
 nutri_cadastrado = []
-personal_cadastrado = []
 
 funcionario_master = {"nome": "admin", "CPF": "123.321.123-32", "E-mail": "admin@email.com","user": "admin", "senha": "admin"} # usuario admin 
 funcionario_cadastrado.append(funcionario_master)

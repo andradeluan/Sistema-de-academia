@@ -4,7 +4,10 @@ def nutri(): # função para contratar serviço de nutricionista
   print('=-='*10)
   op = 0 
   while True: # menu para contratar serviço de nutricionista
-    op = int(input('1. Avaliação Física.\n2. Plano Alimentar.\n3. Avaliação física + Plano Alimentar.\n4. Sair\nEscolha uma opção: '))
+    print('=-='*10)
+    print('\n[ 1 ] Avaliação Física.\n[ 2 ] Plano Alimentar.\n[ 3 ] Avaliação física + Plano Alimentar.\n[ 4 ] Sair\n')
+    print('=-='*10)
+    op = int(input('\nEscolha uma opção: '))
     if op == 1:
       print('=-='*10)
       print('\nAvaliação Física custa R$50,00\n')
@@ -68,12 +71,12 @@ def nutri(): # função para contratar serviço de nutricionista
           break
         else:
           print('=-='*10)
-          print('Opção invalida!\nTente outra vez.\n')
+          print('\nOpção invalida!\nTente outra vez.\n')
           print('=-='*10)
     elif op == 4:
       break
     else:
       print('=-='*10)
-      print('Opção invalida!\nTente outra vez.\n')
+      print('\nOpção invalida!\nTente outra vez.\n')
       print('=-='*10)
 

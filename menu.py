@@ -1,10 +1,17 @@
+'''
+EQUIPE:
+    --> JENNIFER PORTO
+    --> LUAN ANDRADE
+    --> RAFAEL VIEIRA
+'''
+
 #Conectando com outros documentos.py
 import cadastro
 import nutricionista
 
+ # Menu Principal:
 opcao = 0
 while opcao != 3:
-    # Menu Principal:
     print('=-='*10)
     print("\nACADEMIA FIT GYM\nPara você deixar sua saúde em dia!\n")
     print("\n [ 1 ] Entrar\n [ 2 ] Cadastro\n [ 3 ] Sair\n")
