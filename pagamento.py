@@ -21,7 +21,9 @@ def escolher_plano(): # menu para escolher plano
         elif escolha == 5:
             return None
         else:
-            print("Opção inválida. Por favor, tente novamente.")
+            print('=-='*10)
+            print("\nOpção inválida. Por favor, tente novamente.\n")
+            print('=-='*10)
 
 
 def escolher_forma_de_pagamento(plano): # menu para escolher a forma de pagamento
